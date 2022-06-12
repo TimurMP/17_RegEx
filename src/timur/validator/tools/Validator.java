@@ -11,8 +11,10 @@ public class Validator  {
         return str.matches(pattern);
     }
     public static boolean checkDateFormatUS(String str) {
-        //TODO
-        return false;
+        //
+        //Format: YYYY-MM-DD
+        String pattern = "([1-2][0-9]{3})-([0-1][0-2]|0[0-9])-([0-3][0-1]|[0-2][0-9])";
+        return str.matches(pattern);
     }
     public static boolean checkPhoneNumber(String str) {
         //TODO

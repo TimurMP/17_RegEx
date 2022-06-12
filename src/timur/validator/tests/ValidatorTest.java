@@ -16,7 +16,6 @@ class ValidatorTest {
         assertFalse(Validator.checkCreditCard("123456aasddss545"));
 
 
-
     }
 
     @Test
@@ -29,14 +28,22 @@ class ValidatorTest {
         assertFalse(Validator.checkDateFormatEU("32.03.1995"));
         assertFalse(Validator.checkDateFormatEU("11.15.2021"));
         assertFalse(Validator.checkDateFormatEU("03.03.3033"));
-
-
-
-
+        assertFalse(Validator.checkDateFormatEU("01-01-2001"));
     }
 
     @Test
     void checkDateFormatUS() {
+        //Format: YYYY-MM-DD
+        assertTrue(Validator.checkDateFormatUS("1999-11-02"));
+        assertTrue(Validator.checkDateFormatUS("2022-06-13"));
+        assertTrue(Validator.checkDateFormatUS("2038-06-25"));
+        assertFalse(Validator.checkDateFormatUS("3333-06-25"));
+        assertFalse(Validator.checkDateFormatUS("3333-06-25-25"));
+        assertFalse(Validator.checkDateFormatUS("1999.06.25"));
+        assertFalse(Validator.checkDateFormatUS("2038-15-25"));
+        assertFalse(Validator.checkDateFormatUS("2038-11-48"));
+
+
     }
 
     @Test
