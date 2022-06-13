@@ -48,6 +48,18 @@ class ValidatorTest {
 
     @Test
     void checkPhoneNumber() {
+        //Format: +99(99)9999-9999
+        assertTrue(Validator.checkPhoneNumber("+99(99)9999-9999"));
+        assertTrue(Validator.checkPhoneNumber("+97(25)1234-5678"));
+        assertFalse(Validator.checkPhoneNumber("+97(25)a234-5678"));
+        assertFalse(Validator.checkPhoneNumber("+97(25)1234.5678"));
+        assertFalse(Validator.checkPhoneNumber("+972512345678"));
+        assertFalse(Validator.checkPhoneNumber("+97251234-5678"));
+
+
+
+
+
     }
 
     @Test

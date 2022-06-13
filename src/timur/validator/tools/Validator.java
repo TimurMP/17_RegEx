@@ -17,11 +17,11 @@ public class Validator  {
         return str.matches(pattern);
     }
     public static boolean checkPhoneNumber(String str) {
-        //TODO
-        return false;
+        //Format: +99(99)9999-9999
+        String pattern = "\\+(\\d{2})\\(\\d{2}\\)\\d{4}-\\d{4}";
+        return str.matches(pattern);
     }
     public static boolean checkLessEquals255(String str) {
-        //TODO
         return false;
     }
 
