@@ -57,12 +57,27 @@ class ValidatorTest {
         assertFalse(Validator.checkPhoneNumber("+97251234-5678"));
 
 
-
-
-
     }
 
     @Test
     void checkLessEquals255() {
+        assertTrue(Validator.checkLessEquals255("255"));
+        assertTrue(Validator.checkLessEquals255("199"));
+        assertTrue(Validator.checkLessEquals255("100"));
+        assertTrue(Validator.checkLessEquals255("99"));
+        assertTrue(Validator.checkLessEquals255("9"));
+        assertTrue(Validator.checkLessEquals255("0"));
+        assertFalse(Validator.checkLessEquals255("256"));
+        assertFalse(Validator.checkLessEquals255("333"));
+        assertFalse(Validator.checkLessEquals255("25a"));
+        assertFalse(Validator.checkLessEquals255("(255)"));
+
+
+
+
+
+
+
+
     }
 }
