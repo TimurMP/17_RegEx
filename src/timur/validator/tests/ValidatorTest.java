@@ -29,6 +29,12 @@ class ValidatorTest {
         assertFalse(Validator.checkDateFormatEU("11.15.2021"));
         assertFalse(Validator.checkDateFormatEU("03.03.3033"));
         assertFalse(Validator.checkDateFormatEU("01-01-2001"));
+        assertFalse(Validator.checkDateFormatEU("00.01.2018"));
+        assertFalse(Validator.checkDateFormatEU("01.00.2018"));
+        assertFalse(Validator.checkDateFormatEU("01.00.0000"));
+
+
+
     }
 
     @Test

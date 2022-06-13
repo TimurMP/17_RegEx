@@ -8,7 +8,7 @@ public class Validator {
 
     public static boolean checkDateFormatEU(String str) {
         //Format: DD.MM.YYYY
-        String pattern = "([0-3][0-1]|[0-2][0-9])\\.([0-1][0-2]|0[0-9])\\.([1-2][0-9]{3})";
+        String pattern = "([0-3]1|[0-2][1-9])\\.(1[1-2]|0[1-9])\\.([1-2][0-9]{3})";
         return str.matches(pattern);
     }
 
